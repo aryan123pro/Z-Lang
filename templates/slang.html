@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container py-5">
+  <h1 class="mb-5 text-center text-white fw-bold">📚 All Slang Words</h1>
+
+  {% for slang in slangs %}
+    <div class="frosted-wrapper-slang mb-4 p-4">
+      <h3 class="fw-bold mb-2">
+        <a href="/slang/{{ slang['id'] }}" class="text-white">
+          {{ slang['phrase'] }}
+        </a>
+      </h3>
+      <p><strong class="text-white-50">Meaning:</strong> {{ slang['meaning'] }}</p>
+
+      {% if slang['example'] %}
+        <p><em class="text-light">Example: {{ slang['example'] }}</em></p>
+      {% endif %}
+
+      {% if slang['context'] %}
+        <p class="text-white-50"><small>Context: {{ slang['context'] }}</small></p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

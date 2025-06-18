@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container text-center py-5">
+
+  {% if slang %}
+    <div class="frosted-wrapper-slang mx-auto p-4" style="max-width: 650px;">
+      <h2 class="fw-bold text-white mb-2">🔥 Word of the Day 🔥</h2>
+      <h3 class="text-gradient fw-bold mb-3">“{{ slang['phrase'] }}”</h3>
+      <p class="text-white"><strong>Meaning:</strong> {{ slang['meaning'] }}</p>
+      <p class="text-white"><strong>Context:</strong> <em>{{ slang['context'] }}</em></p>
+    </div>
+  {% else %}
+    <div class="alert alert-warning shadow-sm">No slangs in the database yet.</div>
+  {% endif %}
+
+  <!-- 🎉 Animated Squad -->
+  <div class="d-flex justify-content-center align-items-center flex-wrap gap-4 mt-4">
+    <img src="/static/crocodile.gif" class="word-gif-img" style="max-height: 140px;" alt="Crocodile dancing" />
+    <img src="/static/crab.gif" class="word-gif-img" style="max-height: 140px;" alt="Crab dancing" />
+    <img src="/static/elephant.gif" class="word-gif-img" style="max-height: 140px;" alt="Elephant dancing" />
+  </div>
+
+</div>
+{% endblock %}

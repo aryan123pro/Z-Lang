@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 85vh;">
+  <div class="frosted-wrapper-review p-5 rounded-4 shadow-lg" style="max-width: 600px; width: 100%;">
+    <h2 class="text-center text-light mb-2">💬 Drop a Slang</h2>
+    <p class="text-center text-white-50 mb-4">
+      We’re growing our Gen Z slang database — drop your fav slang below and help the culture thrive 🔥
+    </p>
+
+    <form action="/submit" method="POST">
+      <div class="mb-3">
+        <label for="phrase" class="form-label text-white fw-semibold">Slang Phrase *</label>
+        <input type="text" class="form-control custom-input" id="phrase" name="phrase" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="meaning" class="form-label text-white fw-semibold">Meaning *</label>
+        <textarea class="form-control custom-input" id="meaning" name="meaning" rows="2" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="example" class="form-label text-white">Example *</label>
+        <textarea class="form-control custom-input" id="example" name="example" rows="2" required></textarea>
+      </div>
+
+      <div class="mb-4">
+        <label for="context" class="form-label text-white">Context *</label>
+        <textarea class="form-control custom-input" id="context" name="context" rows="2" required></textarea>
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="submit-btn">🚀 Submit</button>
+      </div>
+    </form>
+
+    {% if success %}
+      <div class="alert alert-success mt-3 text-center">{{ success }}</div>
+    {% endif %}
+    {% if error %}
+      <div class="alert alert-danger mt-3 text-center">{{ error }}</div>
+    {% endif %}
+  </div>
+</div>
+<pre>
+
+</pre>
+{% endblock %}

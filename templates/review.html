@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="container mt-4">
+    <h2 class="text-white mb-4">📥 Pending Submissions</h2>
+
+    {% if submissions %}
+      {% for s in submissions %}
+        <div class="frosted-wrapper-review mb-4 p-4">
+          <h4 class="fw-bold text-light">{{ s.phrase }}</h4>
+          <p class="text-white"><strong>Meaning:</strong> {{ s.meaning }}</p>
+          <p class="text-white"><strong>Example:</strong> {{ s.example or '—' }}</p>
+          <p class="text-white"><strong>Context:</strong> {{ s.context or '—' }}</p>
+
+          <div class="mt-3 d-flex gap-2 flex-wrap">
+            <form method="post">
+              <input type="hidden" name="id" value="{{ s.id }}">
+              <button name="action" value="admit" class="btn px-4 fw-semibold" style="background-color: #ffd700; color: #000; border-radius: 25px;">
+                ✅ Admit
+              </button>
+            </form>
+
+            <form method="post">
+              <input type="hidden" name="id" value="{{ s.id }}">
+              <button name="action" value="reject" class="btn px-4 fw-semibold" style="background-color: #ff4b81; color: white; border-radius: 25px;">
+                ❌ Reject
+              </button>
+            </form>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="text-white">No submissions waiting for review.</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center py-5">
+  <div class="frosted-wrapper-review p-4 shadow-lg rounded-4" style="max-width: 700px; width: 100%;">
+
+    {% if slang %}
+      <h2 class="text-center text-light mb-3">🔤 {{ slang.phrase }}</h2>
+
+      <p class="text-white">
+        <strong>📖 Meaning:</strong><br>
+        {{ slang.meaning }}
+      </p>
+
+      <p class="text-white">
+        <strong>🌐 Context:</strong><br>
+        {{ slang.context or "—" }}
+      </p>
+
+      <p class="text-white">
+        <strong>💬 Example:</strong><br>
+        <em>{{ slang.example or "—" }}</em>
+      </p>
+
+    {% else %}
+      <h2 class="text-center text-light">No results found for “<span class="text-warning">{{ word }}</span>”</h2>
+    {% endif %}
+  </div>
+</div>
+<div class="word-gif-grid">
+  <img src="/static/crocodile.gif" alt="Slay gif" class="word-gif-img gif-1">
+  <img src="/static/crab.gif" alt="Slay gif" class="word-gif-img gif-2">
+  <img src="/static/elephant.gif" alt="Slay gif" class="word-gif-img gif-3">
+  <img src="/static/dinosaur.gif" alt="Slay gif" class="word-gif-img gif-4">
+
+</div>
+</div>
+{% endblock %}

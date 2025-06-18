@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 85vh;">
+  <div class="frosted-wrapper p-5 rounded-4 shadow-lg" style="max-width: 500px; width: 100%;">
+    <h2 class="text-center text-light mb-4">🛡️ Admin Login</h2>
+
+    {% if error %}
+      <div class="alert alert-danger text-center">{{ error }}</div>
+    {% endif %}
+
+    <form method="post">
+      <div class="mb-4">
+        <label class="form-label text-white fw-semibold">Enter Admin Code</label>
+        <input type="password" name="code" class="form-control custom-input px-3 py-2" placeholder="••••••••" required>
+      </div>
+      <div class="d-grid">
+        <button type="submit" class="login-btn">🔐 Login</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+

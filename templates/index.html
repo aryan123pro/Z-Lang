@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="frosted-wrapper d-flex justify-content-center align-items-center text-center">
+  <div class="home-bg d-flex flex-column justify-content-center align-items-center px-3">
+
+    <h1 class="display-4 fw-bold mb-3 text-white">Welcome to  <span class="d-block d-md-inline">Z‑Lang</span></h1>
+    <p class="lead text-white mb-4">
+      The Gen Z Slang Dictionary – stay fresh ✨
+    </p>
+
+    <a href="/slang" class="btn btn-explore mt-4">📚 Explore Slangs</a>
+
+<form class="d-flex justify-content-center mt-3" action="/explain" method="get">
+  <input name="word" autocomplete="off" autofocus="on" type="text" name="query" class="form-control me-2" placeholder="Search a slang word" required />
+  <button type="submit" class="btn btn-search">Search</button>
+</form>
+
+  </div>
+</div>
+<section id="about" class="about-section py-5">
+  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-4 px-4">
+
+    <div class="about-text col-md-6">
+      <h2 class="section-title mb-3">📖 About Z-Lang</h2>
+      <p class="about-lead">
+        Z-Lang is the ultimate GEN-Z DICTIONARY — powered by KasperCools Gen Z Slang Dataset (MIT approved) and community submissions
+        It’s built with Flask + SQLite
+      </p>
+      <p class="about-description">
+        Whether you're decoding TikTok comments or understing Gen Z terms as a  Millennial or Boomer, Z-Lang’s got your back.
+        Constantly evolving, just like the culture.
+      </p>
+    </div>
+
+    <div class="about-image col-md-5 text-center">
+      <img src="/static/book.png
+      " alt="About Z-Lang" class="img-fluid rounded-4 shadow">
+    </div>
+  </div>
+</section>
+
+
+<section id="faq" class="faq-section py-5">
+  <div class="container px-4">
+    <div class="row align-items-center justify-content-between">
+
+      <!-- Left: FAQ Heading + Cards -->
+      <div class="col-md-7">
+        <h2 class="section-title mb-5">💬 Frequently Asked Questions</h2>
+
+        <div class="faq-card">
+          <h5>🤔 What is Z-Lang?</h5>
+          <p>Z-Lang is a Gen Z slang dictionary — crowdsourced, community-powered, and constantly evolving 🔥</p>
+        </div>
+
+        <div class="faq-card">
+          <h5>📝 Can I submit my own slang?</h5>
+          <p>Absolutely! Just hit the 💬 Submit button and drop your slang. We review it before publishing.</p>
+        </div>
+
+        <div class="faq-card">
+          <h5>👀 Is this only for Gen Z?</h5>
+          <p>Nope! Whether you’re a Millennial, Gen Alpha, or just slang-curious — Z-Lang is for everyone 🌎</p>
+        </div>
+      </div>
+       <!-- Right: Image -->
+       <div class="col-md-5 text-center">
+        <img src="/static/fish.gif" alt="FAQ Image" class="img-fluid faq-image mt-4 mt-md-0">
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="developer" class="developer-section py-5">
+  <div class="container px-4">
+    <div class="row align-items-center justify-content-between">
+
+      <!-- Left: Text -->
+      <div class="col-md-7">
+        <h2 class="section-title mb-1">👨‍💻 Meet the Developer</h2>
+        <h4 class="dev-name mb-4">Aryan Doifode</h4>
+
+        <p>
+          Hey! I’m Aryan Doifode, from Mumbai, India. I’m really into tech and coding, and right now, I’m also preparing for JEE — it’s tough, but I enjoy the challenge. In between studying, I like building cool stuff with code, especially anything related to AI or making daily things smarter.✨<br>
+This project is actually my final project for CS50, and I loved making it. The course taught me so much, and honestly, it was fun figuring things out, fixing bugs, and seeing it all come together. It wasn’t just a course — it felt like something real I was part of.
+        </p>
+
+        <div class="social-icons mt-4">
+          <a href="https://www.instagram.com/aryanlovesmusic" target="_blank" class="me-3">
+            <i class="bi bi-instagram"></i> Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/aryan-doifode-711345356" target="_blank">
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Dev Image -->
+      <div  class="col-md-5 d-flex justify-content-center align-items-center">
+        <img src="/static/aryan.jpg" alt="Developer" class="img-fluid dev-image mt-4 mt-md-0">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+{% endblock %}
