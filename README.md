@@ -82,4 +82,3 @@ CREATE TABLE submissions (
 
 Live at: **[https://z-lang.onrender.com](https://z-lang.onrender.com)**
 
----
