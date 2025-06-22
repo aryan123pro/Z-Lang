@@ -1,7 +1,7 @@
 
 # Z-Lang🧃 – The Gen Z Dictionary
 
-I'm **Aryan Doifode** from Mumbai and a CS50 student. Z-Lang is my final project — a fun, modern web app that helps people discover and understand Gen Z slang.
+I'm **Aryan Doifode** from Mumbai and a CS50 student. Z-Lang is my final project for CS50x — a fun, modern web app that helps people discover and understand Gen Z slang.
 
 ## 🧠 What It Does
 
@@ -17,17 +17,19 @@ Z-Lang is like your go-to Gen Z dictionary. You can:
 * **Flask** – for the backend logic and routing
 * **SQLite** – to store all the slangs and submissions
 * **HTML/CSS** – for a simple but responsive frontend
-* **Python** – for all the brains behind the scenes
+* **Python** – for loading csv data into database and etc
 
 ## 💡 Why I Built This
 
-I’ve always loved language, memes, and making tools that feel alive. This project gave me the chance to combine it all — and CS50 gave me the confidence to ship it
+I’ve always loved language, memes, and making tools that feel alive also I developed a new interest SQL due to the course. This project gave me the chance to combine it all.
 
-Feel free to explore it, use it, or even submit some new slang of your own. Thanks for stopping by! 🚀
+## ✨ Reflection
+
+CS50x as a course has helped me make all my web projects more dynamic and interactive — until now, I only built static websites with no backend. Malan sir has taught the concepts so well that every lecture has left a lasting impression on my brain 😄. This course also sparked a new interest in SQL for me, and I’m definitely looking forward to diving deeper into it!
 
 ### 🗃️ Database Schema
 
-Z-Lang uses SQLite with two tables:
+Z-Lang uses SQLite database names slanglinker.db with two tables:
 
 ```sql
 -- Table for approved slang
