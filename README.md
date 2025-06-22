@@ -1,6 +1,3 @@
-Here’s a clean, humanized, and not-too-technical `README.md` for your **Z-Lang** project:
-
----
 
 # Z-Lang🧃 – The Gen Z Dictionary
 
