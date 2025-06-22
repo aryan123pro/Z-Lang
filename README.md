@@ -1,5 +1,5 @@
 
-# Z-Lang🧃 – The Gen Z Dictionary
+# Z-Lang🧃 – The Gen-Z Dictionary
 
 I'm **Aryan Doifode** from Mumbai and a CS50 student. Z-Lang is my final project for CS50x — a fun, modern web app that helps people discover and understand Gen Z slang.
 
